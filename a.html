@@ -1,27 +1,93 @@
-<!DOCTYPE HTML>
-<html>
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="jquery.qrcode.min.js"></script>
+
+<script type="text/javascript" src="//marveltech.cn/abc/jquery.js"></script>
+<script type="text/javascript" src="//marveltech.cn/abc/jquery.qrcode.min.js"></script>
 <script type="text/javascript">
-$(document).ready(function(){
-$('#qrcode').qrcode(window.location.href);
-  $(".la_img").mouseover(function(){
-  $("#qrcode").show();
+var $lbs1013=$;
+var url=window.location.href;
+$lbs1013(document).ready(function(){
+$lbs1013('#lbscode').qrcode({width: 88,height: 88,text: url});
+  $lbs1013("#share_wx").mouseover(function(){
+  $lbs1013("#lbscode").show();
   });
-  $(".la_img").mouseout(function(){
-  $("#qrcode").hide();
+  $lbs1013("#share_wx").mouseout(function(){
+  $lbs1013("#lbscode").hide();
+  });
+  $lbs1013("#share_wb").mouseover(function(){
+  $lbs1013("#lbscode").show();
+  });
+  $lbs1013("#share_wb").mouseout(function(){
+  $lbs1013("#lbscode").hide();
+  });
+  $lbs1013("#share_qq").mouseover(function(){
+  $lbs1013("#lbscode").show();
+  });
+  $lbs1013("#share_qq").mouseout(function(){
+  $lbs1013("#lbscode").hide();
   });
 });
 </script>
 <style type="text/css">
 
-
+#lb_share{
+	background-image: url("//marveltech.cn/abc/share.png");
+  	background-repeat:no-repeat;
+	background-position: 12px 0px;
+	padding-top: 12px;
+	width: 200px;
+	height: 70px;
+	align-content: center;
+	position: fixed;
+	top: 12px;
+	right: 2px;
+}
+#share_wx{
+	background: url("//marveltech.cn/abc/1.png");  	
+	background-repeat:no-repeat;
+	width: 32px;
+	height: 32px;
+	margin: 9px;
+	padding: 0px;
+	float: left;
+}
+#share_wb{
+	background: url("//marveltech.cn/abc/2.png");
+	background-repeat:no-repeat;
+	width: 32px;
+	height: 32px;
+	margin: 9px;
+	padding: 0px;
+	float: left;
+}
+#share_qq{
+	background: url("//marveltech.cn/abc/3.png");
+	background-repeat:no-repeat;
+	width: 32px;
+	height: 32px;
+	margin: 9px;
+	padding: 0px;
+	float: left;
+}
+#lbscode{
+	background-color:#ffffff;
+	border: 5px solid #333333;
+	filter:alpha(opacity=89);
+  /* CSS3 standard */
+  opacity:0.89;
+	width: 128px;
+	height: 128px;
+	float: none;
+	position: fixed;
+	top: 88px;
+	right:60px;
+	z-index: 999999;
+	padding: 15px;
+}
 </style>
-</head>
 
-<body>
-<h1 class="la_img">share</h1>
-<div id="qrcode" style="display: none;"></div>
+	<div id="lb_share">
+		<div id="share_wx"></div>
+		<div id="share_wb"></div>
+		<div id="share_qq"></div>
+	</div>
+<div id="lbscode" style="display: none;"></div>
 
-</body>
-</html>
