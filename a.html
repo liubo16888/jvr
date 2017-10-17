@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jquery.qrcode.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$('#qrcode').qrcode(window.location.href);
+  $(".la_img").mouseover(function(){
+  $("#qrcode").show();
+  });
+  $(".la_img").mouseout(function(){
+  $("#qrcode").hide();
+  });
+});
+</script>
+<style type="text/css">
+
+
+</style>
+</head>
+
+<body>
+<h1 class="la_img">share</h1>
+<div id="qrcode" style="display: none;"></div>
+
+</body>
+</html>
